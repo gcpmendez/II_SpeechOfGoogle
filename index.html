@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="webkitSpeechGoogle.js" type="text/javascript"></script>
+        <script src="style.css"></script>
+    </head>
+    <body>
+        <h1 id="text">Por favor, dame acceso al micrófono.</h1>
+        <script type="text/javascript">
+            var text = document.getElementById('text')
+
+            var speech = new Speech({
+                debugging: true,
+                continuous: true,
+                interimResults: true,
+                autoRestart: true
+            })
+
+            speech
+                .on('start', function () {
+                    text.innerHTML = 'Vamos!, cuentame algo..'
+                })
+                .on('end', function () {
+                    text.innerHTML = 'Hasta luego! :).'
+                })
+                .on('interimResult', function (msg) {
+                    text.innerHTML = msg
+                })
+                .on('finalResult', function (msg) {
+                    text.innerHTML = msg
+                })
+                .start()
+
+        </script>
+    </body>
+</html>
