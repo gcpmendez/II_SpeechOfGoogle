@@ -18,6 +18,9 @@
                 interimResults: true,
                 autoRestart: true
             })
+            var dateFormat = require('dateformat');
+            var today = new Date();
+            
 
             speech
                 .on('start', function () {
@@ -32,7 +35,7 @@
                         speech.stop()
                     }
                     if (msg == 'qué hora es') {
-                        text.innerHTML = 'son las 12pm'
+                        text.innerHTML = dateFormat(now, "h:MM:ss");
                     }
                 })
                 .on('finalResult', function (msg) {
