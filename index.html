@@ -18,20 +18,21 @@
                 autoRestart: true
             })
 
-            speech
-                .on('start', function () {
-                    text.innerHTML = 'Vamos!, cuentame algo..'
-                })
-                .on('end', function () {
-                    text.innerHTML = 'Hasta luego! :).'
-                })
-                .on('interimResult', function (msg) {
-                    text.innerHTML = msg
-                })
-                .on('finalResult', function (msg) {
-                    text.innerHTML = msg
-                })
-                .start()
+            speech.onstart = function (event) {
+              text.innerHTML = 'Vamos!, cuentame algo..'
+            };
+            speech.onend = function (event) {
+                text.innerHTML = 'Hasta luego! :).'
+            };
+            speech.onresult = function (event) {
+                text.innerHTML = event
+            };
+
+            speech.onspeechstart= function (event) {
+
+                    text.innerHTML = event
+                };
+            speech.start();
 
         </script>
     </body>
