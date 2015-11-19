@@ -29,7 +29,9 @@
                     text.innerHTML = msg
                 })
                 .on('finalResult', function (msg) {
-                    text.innerHTML = msg
+                    if (msg == 'listo') {
+                        speech.stop()
+                    }
                 })
                 .start()
 
