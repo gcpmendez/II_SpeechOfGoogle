@@ -7,13 +7,13 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <p>Test sencillo del Speech API de Google.<br> Comandos soportados: <b>'qué hora es'</b> y <b>'hasta luego'</b>.</p>
+        <p>Test sencillo del Speech API de Google.<br> Comandos soportados: <b>'qué hora es'</b> y <b>'hasta luego</b>.</p>
         <h1 id="text">Por favor, permite el acceso al micrófono</h1>
         <script type="text/javascript">
             var text = document.getElementById('text')
 
             var speech = new Speech({
-                debugging: true,
+                //debugging: true,
                 continuous: true,
                 interimResults: true,
                 autoRestart: true
@@ -36,7 +36,6 @@
                     }
                 })
                 .on('finalResult', function (msg) {
-                    text.innerHTML = msg
                 })
                 .start()
 
