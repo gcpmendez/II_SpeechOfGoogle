@@ -7,7 +7,7 @@
         <script src="style.css"></script>
     </head>
     <body>
-        <h1 id="text">Please allow access to mic.</h1>
+        <h1 id="text">Por favor, permite el acceso al micrófono</h1>
         <script type="text/javascript">
             var text = document.getElementById('text')
 
@@ -20,10 +20,10 @@
 
             speech
                 .on('start', function () {
-                    text.innerHTML = 'Come on, talk to me.'
+                    text.innerHTML = 'Vamos!, cuentame algo...'
                 })
                 .on('end', function () {
-                    text.innerHTML = 'Stopped listening.'
+                    text.innerHTML = 'Hasta Luego! :)'
                 })
                 .on('interimResult', function (msg) {
                     text.innerHTML = msg
