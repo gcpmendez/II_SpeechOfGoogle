@@ -3,7 +3,7 @@
     <head>
         <title></title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        
+        <script src="webSpeechGoogle.js" type="text/javascript"></script>
         <script src="style.css"></script>
     </head>
     <body>
@@ -11,55 +11,15 @@
         <script type="text/javascript">
             var text = document.getElementById('text')
 
-            var speech = new webkitSpeechRecognition({
+            var speech = new webkitSpeechRecognition();
                 //debugging: true,
-                continuous: true,
-                interimResults: true,
-                autoRestart: true
-            })
+            speech.continuous: true,
+            speech.interimResults: true,
+            speech.lang = "es";
+            //speech.autoRestart: true
 
- speech.onaudiostart = function (event) {
-        console.log("onaudiostart");
-    };
+            speech.start();
 
-    speech.onsoundstart = function (event) {
-        console.log("onsoundstart");
-    };
-
-    speech.onspeechstart = function (event) {
-        console.log("onspeechstart");
-    };
-
-    speech.onspeechend = function (event) {
-        console.log("onspeechend");
-    };
-
-    speech.onsoundend = function (event) {
-        console.log("onsoundend");
-
-    };
-
-    speech.onaudioend = function (event) {
-        console.log("onaudioend");
-    };
-speech.onnomatch = function (event) {
-        console.log("onnomatch");
-    };
-
-    speech.onerror = function (event) {
-        console.log("onerror: " + event);
-
-    };
-
-    speech.onstart = function (event) {
-        console.log("onstart");
-    };
-
-    speech.onend = function (event) {
-        console.log("onend");
-    };
-
-    
             speech.onstart = function (event) {
               text.innerHTML = 'Vamos!, cuentame algo..'
             };
@@ -74,7 +34,7 @@ speech.onnomatch = function (event) {
 
                     text.innerHTML = event
                 };
-            speech.start();
+
 
         </script>
     </body>
