@@ -27,6 +27,9 @@
                 })
                 .on('interimResult', function (msg) {
                     text.innerHTML = msg
+                    if (msg == 'listo') {
+                        speech.stop()
+                    }
                 })
                 .on('finalResult', function (msg) {
                     if (msg == 'listo') {
