@@ -12,12 +12,54 @@
             var text = document.getElementById('text')
 
             var speech = new webkitSpeechRecognition({
-                debugging: true,
+                //debugging: true,
                 continuous: true,
                 interimResults: true,
                 autoRestart: true
             })
 
+ speech.onaudiostart = function (event) {
+        console.log("onaudiostart");
+    };
+
+    speech.onsoundstart = function (event) {
+        console.log("onsoundstart");
+    };
+
+    speech.onspeechstart = function (event) {
+        console.log("onspeechstart");
+    };
+
+    speech.onspeechend = function (event) {
+        console.log("onspeechend");
+    };
+
+    speech.onsoundend = function (event) {
+        console.log("onsoundend");
+
+    };
+
+    speech.onaudioend = function (event) {
+        console.log("onaudioend");
+    };
+speech.onnomatch = function (event) {
+        console.log("onnomatch");
+    };
+
+    speech.onerror = function (event) {
+        console.log("onerror: " + event);
+
+    };
+
+    speech.onstart = function (event) {
+        console.log("onstart");
+    };
+
+    speech.onend = function (event) {
+        console.log("onend");
+    };
+
+    
             speech.onstart = function (event) {
               text.innerHTML = 'Vamos!, cuentame algo..'
             };
