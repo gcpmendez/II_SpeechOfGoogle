@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <p>Test sencillo del Speech API de Google.<br> Comandos soportados: <b>hasta luego</b>.</p>
+        <p>Test sencillo del Speech API de Google.<br> Comandos soportados: <b>hora</b> y <b>hasta luego</b>.</p>
         <h1 id="text">Por favor, permite el acceso al micrófono</h1>
         <script type="text/javascript">
             var text = document.getElementById('text')
@@ -31,7 +31,7 @@
                     if (msg == 'hasta luego') {
                         speech.stop()
                     }
-                    if (msg == 'que hora es') {
+                    if (msg == 'hora') {
                         text.innerHTML = 'son las 12pm'
                     }
                 })
