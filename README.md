@@ -11,11 +11,11 @@ Práctica realizada con **José Manuel Hernández Hernández** (alu0100697032).
 2. Un desarrollo: Se trata de usar la Api de reconocimiento de Google. Esta Api recibe el fichero de audio, realiza el reconocimiento y retorna una respuesta JSON que se debe parsear (Se recomienda JavaScript) para realizar alguna acción o conjunto de acciones.
 
 
-![Pantalla inicial](https://github.com/gcpmendez/VuforiaArt/blob/master/Speech1.JPG?raw=true)
+![Pantalla inicial](https://github.com/gcpmendez/SpeechOfGoogle/blob/master/Speech1.JPG?raw=true)
 
 
 ## Comparativa
-
+![Pantalla inicial](https://github.com/gcpmendez/SpeechOfGoogle/blob/master/comparativa.png?raw=true)
 
 
 
