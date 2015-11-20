@@ -15,6 +15,10 @@ Práctica realizada con **José Manuel Hernández Hernández** (alu0100697032).
 ## Comparativa
 ![Pantalla inicial](https://github.com/gcpmendez/SpeechOfGoogle/blob/master/comparativa.png?raw=true)
 
+#### Fuentes
+* [Wikipedia/List_of_speech_recognition_software](URL "https://en.wikipedia.org/wiki/List_of_speech_recognition_software")
+* [Wiki/List_of_speech_recognition_applications](URL "https://wiki.archlinux.org/index.php/Speech_recognition#List_of_speech_recognition_applications")  
+
 ## Desarrollo
 ![Pantalla inicial](https://github.com/gcpmendez/SpeechOfGoogle/blob/master/Speech1.JPG?raw=true)
 
